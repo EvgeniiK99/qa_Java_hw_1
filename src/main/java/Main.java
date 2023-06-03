@@ -13,14 +13,25 @@ public class Main {
         float floatValue = 2.5F; // Хранит число с плавающей точкой от -3.4E+38 до 3.4E+38
         double doubleValue = 2.15; // Хранит число с плавающей точкой от -1.7E+308 до 1.7E+308
 
-        char charValue = 'a'; //Хранит одиночный символ и занимает 2 байта памяти
-        String stringValue = "Hello!"; // Строковые переменные, не представляют собой примитивы и хранят в себе целые строки
+        char charValue = 'H'; //Хранит одиночный символ и занимает 2 байта памяти
+        String stringValue = "ello"; // Строковые переменные, не представляют собой примитивы и хранят в себе целые строки
 
-        System.out.println(++intValue); // Переполнение int
+        String concat = charValue + stringValue;
+
+        System.out.println("Переполнение int: " + ++intValue); // Переполнение int
         System.out.println(intValue + intValue);
 
-        System.out.println(byteValue * 5.55);
-        System.out.println(doubleValue / 2.14);
+        System.out.println("Деление byte на double: " + byteValue * 5.55);
+        System.out.println("Деление double на float: " + doubleValue / floatValue);
+        System.out.println("Вычитание short из long: " + (longValue - shortValue));
+
+        System.out.println("Конкатенация char и String: " + concat);
+
+        if (concat.equals("Hello")) {
+            System.out.println(concat + " world!");
+        } else {
+            System.out.println("Что-то не так");
+        }
 
         System.out.println("Введите оператор:");
         String operator = sc.nextLine();
